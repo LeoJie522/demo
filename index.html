@@ -18,8 +18,8 @@
       --content-width: 840px;
       --section-width: 1120px;
       --hero-start: #e85d9e;
-      --hero-end: #7c4dff;
-      --title-purple: #7c3aed;
+      --hero-end: #5b21b6;
+      --title-purple: #5b21b6;
     }
 
     html, body {
@@ -44,7 +44,7 @@
       justify-content: center;
       text-align: center;
       color: #fff;
-      background: linear-gradient(115deg, var(--hero-start), var(--hero-end));
+      background: linear-gradient(115deg, var(--hero-end), var(--hero-start));
       padding: 24px 22px;
     }
 
@@ -65,6 +65,22 @@
       font-weight: 700;
       text-align: center;
       color: #fff;
+    }
+
+    .intro-description {
+      max-width: var(--section-width);
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.45;
+      text-align: left;
+    }
+
+    .headphones-icon {
+      width: 1.25em;
+      height: 1.25em;
+      margin-left: 4px;
+      vertical-align: -0.22em;
     }
 
     .section {
@@ -89,7 +105,16 @@
       margin: 0 auto 12px;
       font-size: 32px;
       font-weight: 700;
+      color: var(--title-purple);
       text-transform: lowercase;
+    }
+
+    .section-description {
+      max-width: var(--section-width);
+      margin: -4px auto 16px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.45;
     }
 
     .static .section-title {
@@ -98,6 +123,12 @@
       max-width: none;
       margin: 0 0 0;
       transform: none;
+    }
+
+    .static .section-description {
+      grid-column: 1 / -1;
+      max-width: none;
+      margin: -4px 0 6px;
     }
 
     .track {
@@ -380,8 +411,15 @@
   </header>
 
   <div class="page">
+    <div class="intro-description">
+      This page provides static audio examples and dynamic position demos for comparing source-wise binaural rendering methods. Please use headphones for spatial perception.<img class="headphones-icon" src="assets/icons/headphones.svg" alt="Headphones" />
+    </div>
+
     <section class="section static">
       <div class="section-title">1. static</div>
+      <div class="section-description">
+        Static examples compare the input mixture, SP (equal-power panning), MCSR-T, and the HRIR-rendered reference for fixed source positions.
+      </div>
 
       <div class="track">
         <div class="track-title">
@@ -520,6 +558,9 @@
 
     <section class="section dynamic">
       <div class="section-title">2. dynamic</div>
+      <div class="section-description">
+        Dynamic demos compare SP and MCSR-T when the vocal source rotates while the other sources remain fixed.
+      </div>
 
       <div class="track">
         <div class="track-title">
