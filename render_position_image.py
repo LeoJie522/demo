@@ -12,6 +12,10 @@ Example:
   python3 render_position_image.py \
     --positions "230,320,50,140" \
     --output "assets/static/Cristina Vane - So Easy/position.png"
+
+  python3 render_position_image.py \
+    --positions "0,90,180,270" \
+    --output "assets/static/AM Contra - Heart Peripheral/position.png"
 """
 
 from __future__ import annotations
@@ -61,7 +65,7 @@ def build_figure(positions: Iterable[float], output_path: Path) -> None:
         (0, 0),
         1.0,
         fill=False,
-        linewidth=0.9,
+        linewidth=1.6,
         linestyle="--",
         color="#555555",
         alpha=0.6,
@@ -85,7 +89,7 @@ def build_figure(positions: Iterable[float], output_path: Path) -> None:
         ax.scatter(
             [x],
             [y],
-            s=145,
+            s=320,
             color=SOURCE_COLORS.get(name, "#444444"),
             edgecolors="white",
             linewidths=1.2,
